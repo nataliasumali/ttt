@@ -4,6 +4,7 @@
 		background-repeat: no-repeat;
 		background-size: cover; 
 		background-attachment: fixed;
+		font-family: papyrus;
 	}
 
 	.title {
@@ -12,9 +13,7 @@
 		text-align: center;
 		color: rgb(0, 46, 13);
  		font-size: 60px;
- 		font-family: papyrus;
-
-	}
+ 		}
 
 	.box {
 		height: 80%;
@@ -31,3 +30,27 @@
 		border-radius: 30%;
 		background-color: rgb(71, 47, 44);
 	}
+
+	.x {
+
+	}
+
+	.y {
+
+	}
+
+	.sides {
+		text-align: center;
+		font-size: 30px;
+	}
+
+	.character {
+		height: 25%;
+		width: 130px;
+		border: 2px solid white;
+		border-radius: 50%;
+		margin-left: 25%;
+	}
+
+
+

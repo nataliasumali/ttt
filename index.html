@@ -8,20 +8,31 @@
 		<script type="text/javascript" src="main.js"></script>
 	</head>
 
-	<body x-ng-app="TicTacApp" x-ng-controller="TTTCtrl">
+	<body ng-app="TicApp" ng-controller="ticController">
 
 		<div class="wrapper">
 
 			<div class="title">Tic Tac Toe</div>
-			<div class="box"></div>
-			<div class="box" >
-				<div class="cell" x-ng-repeat="mySingleCell in board"
-		 x-ng-class="{clearFix: (mySingleCell.pos % 3) == 0}"
-		 x-ng-click="makeMove()">
-			{{mySingleCell.status; }}
-				</div>
+
+			<div class="box sides">
+				<p>Pick Your Warrior</p>
+				<div class="character"></div>
+				<div class="character"></div>
+				<div class="character"></div>
 			</div>
-		<div class="box"></div>
+
+			<div class="box" >
+
+				
+
+			</div>
+
+		<div class="box sides">
+			<p>Pick Your Dragon</p>
+			<div class="character"></div>
+			<div class="character"></div>
+			<div class="character"></div>
+		</div>
 		
 	</div>
 	
