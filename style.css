@@ -1,34 +1,36 @@
- html, body, .wrapper {
-		height: 100%;
-		background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9CoRid23aIrCLwbC1tEGz5myjJaCAv3CgAiggZZ-UMUiOFezG);
-		background-repeat: no-repeat;
-		background-size: cover; 
-		background-attachment: fixed;
-		font-family: papyrus;
-	}
+@import url(http://fonts.googleapis.com/css?family=Slackey);
 
-	.title {
-		height: 10%;
-		width: 99%;
-		text-align: center;
-		color: rgb(0, 46, 13);
- 		font-size: 60px;
- 		}
+html, body, .wrapper {
+	height: 100%;
+	font-family: 'Slackey';
+	text-align: center;
+	background-image: url(images/imgres.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: red;
+}
 
- 	.box {
- 		height: 90%;
- 		width: 33%;
- 		border: 1 px solid blue;
- 	}
+.title {
+	height: 10%;
+	font-size: 60px;
+}
 
- 	.side {
- 	}
+.box {
+	height: 10%;
+	width: 10%;
+	border: 3px dashed red;
+	float: left;
+	padding: 7%;
+	font-size: 150px;
+	color: red;
+	background-color: white;
+	opacity: 0.3;
+	margin: 10px 40px;
+	text-indent: 10px;
+}
 
- 	.smallBox {
-		height: 30%;
-		width: 30%;
-		float: left;
-		border: 2px solid red;
- 	}
+#c0 {
+	color: red;
 
-	
+}
