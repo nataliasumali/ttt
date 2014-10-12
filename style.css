@@ -9,28 +9,27 @@ html, body, .wrapper {
 	background-size: cover;
 	background-attachment: fixed;
 	color: red;
+	width: 1000px;
+	margin-left: 32px;
 }
 
 .title {
 	height: 10%;
 	font-size: 60px;
+	margin-right: 200px;
 }
 
 .box {
-	height: 10%;
-	width: 10%;
+	height: 25%;
+	width: 25%;
 	border: 3px dashed red;
 	float: left;
-	padding: 7%;
 	font-size: 150px;
 	color: red;
 	background-color: white;
-	opacity: 0.3;
-	margin: 10px 40px;
-	text-indent: 10px;
-}
+	/*opacity: 0.3;*/
+	}
 
 #c0 {
 	color: red;
-
 }
