@@ -4,7 +4,7 @@ html, body, .wrapper {
 	height: 100%;
 	font-family: 'Slackey';
 	text-align: center;
-	background-image: url(images/imgres.jpg);
+	background-image: url(images/images-1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -30,10 +30,14 @@ span {
 	float: left;
 	font-size: 150px;
 	color: red;
-	background-color: white;
+	/*background-color: white;*/
 	/*opacity: 0.3;*/
 	}
 
-#c0 {
-	color: red;
+.xclass {
+	background-image: url(images/images-6.jpg);
+}
+
+.oclass {
+	background-image: url(images/images-5.jpg);
 }
