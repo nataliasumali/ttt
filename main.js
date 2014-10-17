@@ -1,8 +1,13 @@
+// create the app
 var myApp = angular.module('myApp', []);
 
+// create the controller
 myApp.controller('appController', function($scope) {
-	
 
+	// create a reference to firebase database and collection name
+	// $scope.remoteGameContainer = 
+ // $firebase(new Firebase("https://big-hero-6-tic-tac-toe.firebaseIO.com/databaseGameContainer")) ;
+	
 	$scope.reset = function() {
 		$scope.squares = [
 			{xoStatus: "c0"},
@@ -17,6 +22,8 @@ myApp.controller('appController', function($scope) {
 		];
 
 		$scope.user = 0;
+		$scope.count = 0;
+		$scope.notification = "";
 	}
 
 	$scope.clicked = function(s){
@@ -29,11 +36,13 @@ myApp.controller('appController', function($scope) {
 		}
 		if($scope.user == 0) {
 			s.xoStatus = "X";
-			$scope.user -=1
+			$scope.user -=1;
+			$scope.count ++;
 			winner("X");
 	  } else {
 			s.xoStatus = "O";
 			$scope.user +=1;
+			$scope.count ++;
 			winner("O");
 		}
 	};
@@ -53,7 +62,10 @@ myApp.controller('appController', function($scope) {
 			$scope.squares[2].xoStatus == oneSquare && $scope.squares[4].xoStatus == oneSquare && $scope.squares[6].xoStatus == oneSquare
 		)	
 		  { 
-		  	console.log( oneSquare + " win!");
+		  	$scope.notification = "Hooray!!!"
+		  	console.log( "Hooray!!!");
+			} else if ($scope.count == 8) {
+				console.log("It's a tie...");
 			}
 	};
 

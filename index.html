@@ -12,7 +12,7 @@
 
 	<!-- firebase -->
 	<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
-	
+
 <!-- js -->
 	<script type="text/javascript" src="main.js"></script>
 
@@ -27,6 +27,8 @@
 		<div class="wrapper">
 			<div class="box" ng-click="clicked(s)" ng-class="{xclass: s.xoStatus == 'X', oclass: s.xoStatus == 'O'}"  ng-repeat="s in squares"></div>
 		</div>
+
+		<div class="notification" ng-show="notification==true" ng-hide="notification==false"></div>
 
 		<div class="reset" ng-click="reset()">R<span>e</span>s<span>e</span>t <span>G</span>a<span>m</span>e</div>
 
