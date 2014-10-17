@@ -1,32 +1,66 @@
 var myApp = angular.module('myApp', []);
 
 myApp.controller('appController', function($scope) {
-	$scope.squares = [
-		{xoStatus: "c0"},
-		{xoStatus: "c1"},
-		{xoStatus: "c2"},
-		{xoStatus: "c3"},
-		{xoStatus: "c4"},
-		{xoStatus: "c5"},
-		{xoStatus: "c6"},
-		{xoStatus: "c7"},
-		{xoStatus: "c8"}
-	];
+	
 
-	$scope.user = 1;
+	$scope.reset = function() {
+		$scope.squares = [
+			{xoStatus: "c0"},
+			{xoStatus: "c1"},
+			{xoStatus: "c2"},
+			{xoStatus: "c3"},
+			{xoStatus: "c4"},
+			{xoStatus: "c5"},
+			{xoStatus: "c6"},
+			{xoStatus: "c7"},
+			{xoStatus: "c8"}
+		];
 
-	$scope.myFunction = function(oneSquare) {
-		if ($scope.user == 1) {
-			oneSquare.xoStatus = "X";
-			$scope.user -= 1;
-			console.log(oneSquare.xoStatus);
-		} else {
-			oneSquare.xoStatus = "O";
-			$scope.user += 1;
-			console.log(oneSquare.xoStatus);
-		}
+		$scope.user = 0;
 	}
-})
+
+	$scope.clicked = function(s){
+
+		//if someone already moved on that cell, it won't let any player moves through
+
+		if(s.xoStatus == "X" || s.xoStatus == "O")
+		{
+			return;
+		}
+		if($scope.user == 0) {
+			s.xoStatus = "X";
+			$scope.user -=1
+			winner("X");
+	  } else {
+			s.xoStatus = "O";
+			$scope.user +=1;
+			winner("O");
+		}
+	};
+
+	
+	// Check to see if there's a win
+	var winner = function(oneSquare) {
+		console.log("We're checking ...");
+		if (
+			$scope.squares[0].xoStatus == oneSquare && $scope.squares[1].xoStatus == oneSquare && $scope.squares[2].xoStatus == oneSquare ||
+			$scope.squares[3].xoStatus == oneSquare && $scope.squares[4].xoStatus == oneSquare && $scope.squares[5].xoStatus == oneSquare ||
+			$scope.squares[6].xoStatus == oneSquare && $scope.squares[7].xoStatus == oneSquare && $scope.squares[8].xoStatus == oneSquare ||
+			$scope.squares[0].xoStatus == oneSquare && $scope.squares[3].xoStatus == oneSquare && $scope.squares[6].xoStatus == oneSquare ||
+			$scope.squares[1].xoStatus == oneSquare && $scope.squares[4].xoStatus == oneSquare && $scope.squares[7].xoStatus == oneSquare ||
+			$scope.squares[2].xoStatus == oneSquare && $scope.squares[5].xoStatus == oneSquare && $scope.squares[8].xoStatus == oneSquare ||
+			$scope.squares[0].xoStatus == oneSquare && $scope.squares[4].xoStatus == oneSquare && $scope.squares[8].xoStatus == oneSquare ||
+			$scope.squares[2].xoStatus == oneSquare && $scope.squares[4].xoStatus == oneSquare && $scope.squares[6].xoStatus == oneSquare
+		)	
+		  { 
+		  	console.log( oneSquare + " win!");
+			}
+	};
+
+	//starting the board on the first place
+	$scope.reset();
+
+});
 
 
 
@@ -57,12 +91,7 @@ myApp.controller('appController', function($scope) {
 
 
 
-
-
-
-
-
-
+//JavaScript version
 
 // document.getElementById("c0").addEventListener("click", myFunction);
 // document.getElementById("c1").addEventListener("click", myFunction);
