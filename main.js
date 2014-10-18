@@ -23,7 +23,8 @@ myApp.controller('appController', function($scope) {
 
 		$scope.user = 0;
 		$scope.count = 0;
-		$scope.notification = "";
+		$scope.win = "";
+		$scope.tie = "";
 	}
 
 	$scope.clicked = function(s){
@@ -62,9 +63,10 @@ myApp.controller('appController', function($scope) {
 			$scope.squares[2].xoStatus == oneSquare && $scope.squares[4].xoStatus == oneSquare && $scope.squares[6].xoStatus == oneSquare
 		)	
 		  { 
-		  	$scope.notification = "Hooray!!!"
+		  	$scope.win = "Hooray!!!"
 		  	console.log( "Hooray!!!");
 			} else if ($scope.count == 8) {
+				$scope.tie = "It's a tie..."
 				console.log("It's a tie...");
 			}
 	};

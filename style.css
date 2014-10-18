@@ -33,6 +33,7 @@ span {
 	height: 500px;
 	width: 500px;
 	margin: 0 auto;
+	z-index: 1;
 }
 
 .box {
@@ -43,7 +44,7 @@ span {
 	margin: 2px;
 	/*background-image: url(images/images-14.jpg);
 	background-position: center;*/
-	opacity: 0.7;
+	opacity: 0.5;
 	}
 
 .xclass {
@@ -56,9 +57,18 @@ span {
 	background-size: cover;
 }
 
-.notification {
+.win {
 	height: 500px;
-	
+	width: 500px;
+	background-image: url(images/images.jpg);
+	background-position: center;
+}
+
+.tie {
+	height: 500px;
+	width: 500px;
+	background-image: url(images/imgres.jpg);
+	background-size: cover;
 }
 
 .reset {
