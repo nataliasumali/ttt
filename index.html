@@ -13,6 +13,9 @@
 	<!-- firebase -->
 	<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
 
+	<!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+
 <!-- js -->
 	<script type="text/javascript" src="main.js"></script>
 
@@ -25,12 +28,10 @@
 		<div class="title">Tic <span>Tac</span> Toe</div>
 
 		<div class="wrapper">
-			<div class="box" ng-click="clicked(s)" ng-class="{xclass: s.xoStatus == 'X', oclass: s.xoStatus == 'O'}"  ng-repeat="s in squares"></div>		
-			<div class="win" ng-show="win==true" ng-hide="win==false"></div>
-			<div class="tie" ng-show="tie==true" ng-hide="tie==false"></div>
+			<div class="box" ng-click="clicked(s)" ng-class="{xclass: s.xoStatus == 'X', oclass: s.xoStatus == 'O'}"  ng-repeat="s in gameContainer.FBsquares"></div>		
+			<div class="win" ng-show="gameContainer.FBwin==true" ng-hide="gameContainer.FBwin==false"></div>
+			<div class="tie" ng-show="gameContainer.FBtie==true" ng-hide="gameContainer.FBtie==false"></div>
 		</div>
-
-		
 
 		<div class="reset" ng-click="reset()">R<span>e</span>s<span>e</span>t <span>G</span>a<span>m</span>e</div>
 
