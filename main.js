@@ -28,8 +28,9 @@ $scope.reset = function() {
 
 		console.log("Let's reset the board.");
 }
+
 	//starting the board on the first place
-	// $scope.reset();
+	$scope.reset();
 	
  $scope.gameContainer = {
       FBsquares: $scope.squares,
@@ -85,9 +86,6 @@ $scope.$watch('gameContainer', function() {}) ;
 				console.log("It's a tie...");
 			}
 	};
-
-
-
 });
 
 

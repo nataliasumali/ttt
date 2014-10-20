@@ -18,6 +18,14 @@ span {
 	color: black;
 }
 
+p {
+	position: absolute;
+	text-align: center;
+	font-size: 60px;
+	margin-top: 0;
+	margin-left: 75px;
+}
+
 .megaWrapper {
 	height: 700px;
 	width: 1000px;
@@ -44,7 +52,7 @@ span {
 	margin: 2px;
 	/*background-image: url(images/images-14.jpg);
 	background-position: center;*/
-	opacity: 0.5;
+	opacity: 0.7;
 	}
 
 .xclass {
@@ -60,15 +68,21 @@ span {
 .win {
 	height: 500px;
 	width: 500px;
-	background-image: url(images/images.jpg);
+	background-image: url(images/200-2.gif);
+	background-size: cover;
+	/*background-repeat: no-repeat;*/
 	background-position: center;
+	
 }
 
 .tie {
 	height: 500px;
 	width: 500px;
-	background-image: url(images/imgres.jpg);
+	background-image: url(images/200-1.gif);
 	background-size: cover;
+	/*background-repeat: no-repeat;*/
+	background-position: center;
+	color: blue;
 }
 
 .reset {
@@ -78,3 +92,18 @@ span {
 	border: 2px solid black;
 	font-size: 60px;
 }
+
+/*.board1 {
+	height: 500px;
+	width: 230px;
+	border: 1px solid black;
+	float: left;
+}*/
+
+/*.board2 {
+	height: 500px;
+	width: 230px;
+	border: 1px solid black;
+	margin-left: 765px;
+	margin-top: -500px;
+}*/

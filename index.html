@@ -29,8 +29,12 @@
 
 		<div class="wrapper">
 			<div class="box" ng-click="clicked(s)" ng-class="{xclass: s.xoStatus == 'X', oclass: s.xoStatus == 'O'}"  ng-repeat="s in gameContainer.FBsquares"></div>		
-			<div class="win" ng-show="gameContainer.FBwin==true" ng-hide="gameContainer.FBwin==false"></div>
-			<div class="tie" ng-show="gameContainer.FBtie==true" ng-hide="gameContainer.FBtie==false"></div>
+			<div class="win" ng-show="gameContainer.FBwin==true" ng-hide="gameContainer.FBwin==false">
+				<p>Hooray!!!</p>
+			</div>
+			<div class="tie" ng-show="gameContainer.FBtie==true" ng-hide="gameContainer.FBtie==false">
+				<p>It's a Tie...</p>
+			</div>
 		</div>
 
 		<div class="reset" ng-click="reset()">R<span>e</span>s<span>e</span>t <span>G</span>a<span>m</span>e</div>
