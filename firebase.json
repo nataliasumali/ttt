@@ -1,0 +1,9 @@
+{
+  "firebase": "big-hero-6-tic-tac",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
